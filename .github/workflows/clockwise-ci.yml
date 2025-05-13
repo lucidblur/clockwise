@@ -25,7 +25,7 @@ jobs:
           - cw-cf-0x07
     steps:
     - name: Checkout clockwise
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: clockwise
     - name: Update submodules
@@ -33,7 +33,7 @@ jobs:
         cd $GITHUB_WORKSPACE/clockwise 
         git submodule update --init firmware/clockfaces/
     - name: Checkout GitHub Pages
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: lucidblur/clockwise
         ref: gh-pages
